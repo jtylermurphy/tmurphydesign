@@ -4,11 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>This is a test</title>
+    <style>
+        .hidden {
+            display:none;
+        }
+    </style>
 </head>
 <body>
     Testing
 
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <p class="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                  </p>
         <p>
           <label>Your Name: <input type="text" name="name" /></label>   
         </p>
